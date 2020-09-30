@@ -1,0 +1,17 @@
+<p>{{ msg }}</p>
+
+{% if request.app.payloadErrors %}
+  <p><strong>Payload</strong> errors:</p>
+  <pre>
+  {{ request.app.payloadErrors | dump(2) }}
+  </pre>
+{% else %}
+  {% if request.app.validationErrors %}
+    <p><strong>Validation</strong> errors:</p>
+    <pre>
+    {{ request.app.validationErrors | dump(2) }}
+    </pre>
+  {% else %}
+    <p>No errors</p>
+  {% endif %}
+{% endif %}
