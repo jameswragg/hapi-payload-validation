@@ -10,6 +10,7 @@
   "author": "James Wragg <james.wragg@madgex.com> (https://madgex.com)",
   "license": "MIT",
   "dependencies": {
+    "@hapi/crumb": "^8.0.1",
     "@hapi/hapi": "^20.0.1",
     "@hapi/vision": "^6.0.1",
     "joi": "^17.2.1",

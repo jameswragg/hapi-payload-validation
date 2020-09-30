@@ -1,6 +1,10 @@
 <p>
   {{ msg }}</p>
-<form method="POST" action="#" enctype="multipart/form-data">
+<form method="post" autocomplete="off" novalidate="novalidate" enctype="multipart/form-data">
+  <input id="csrf-crumb" type="hidden" name="CsrfToken" value="{{ CsrfToken }}">
+
+  <p>crumb token: {{ CsrfToken }}</p>
+
   <p>
     name:
     <input name="name" id="name"></p>
